@@ -1,14 +1,10 @@
 import Head from 'next/head';
+import MainLayout from "../layouts/MainLayout";
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      Home Page
-    </div>
+    <MainLayout>
+        Home page
+    </MainLayout>
   );
 }
