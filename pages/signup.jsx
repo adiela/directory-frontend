@@ -4,10 +4,11 @@ import MainLayout from "../layouts/MainLayout/MainLayout";
 const Contact = () => {
     return (
         <MainLayout>
-            <form>
-                <input type="text" name="name" placeholder="Name" />
+            <form noValidate={true}>
                 <input type="email" name="email" placeholder="Email" />
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="password" name="password1" placeholder="Password" />
+                <input type="password" name="password2" placeholder="Confirm Password" />
+                <input type="submit" />
             </form>
 
         </MainLayout>

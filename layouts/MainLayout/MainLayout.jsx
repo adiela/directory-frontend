@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
             <Meta />
             <div>
                 <Navbar />
-                <main>
+                <main className="pt-20">
                     {children}
                 </main>
             </div>

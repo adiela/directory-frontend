@@ -1,23 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
+import NavLink from "./NavLink";
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className="shadow-md fixed w-full z-10 flex justify-between p-5">
             <div>Logo</div>
-            <ul>
-                <li>
-                    <Link href='/'>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link href='/contact'>
-                        Contact
-                    </Link>
-                </li>
+            <ul className="flex">
+                <NavLink location='/'>Home</NavLink>
+                <NavLink location='/contact'>Contact</NavLink>
+                <NavLink location='/signup'>Signup</NavLink>
+                <NavLink location='/login'>Login</NavLink>
             </ul>
-            
         </nav>
     );
 };
