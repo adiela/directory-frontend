@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Meta from "../components/Meta";
+import Navbar from "components/Navbar/Navbar";
+import Footer from "components/Footer/Footer";
+import Meta from "components/Meta/Meta";
 
 const MainLayout = ({ children }) => {
     return (
