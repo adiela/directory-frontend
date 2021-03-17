@@ -1,16 +1,17 @@
 import React from 'react';
-import MainLayout from "../layouts/MainLayout/MainLayout";
+import FormPageLayout from "layouts/FormPageLayout/FormPageLayout";
+import Input from "forms/Input/Input";
+import Button from "components/Button/Button";
 
 const Login = () => {
     return (
-        <MainLayout>
+        <FormPageLayout>
             <form>
-                <input type="text" name="email" placeholder="Email" />
-                <input type="email" name="password" placeholder="Password" />
-                <input type="submit"/>
+                <Input type="text" name="email" placeholder="Email" />
+                <Input type="email" name="password" placeholder="Password" />
+                <Button type="submit">Login</Button>
             </form>
-
-        </MainLayout>
+        </FormPageLayout>
     );
 };
 

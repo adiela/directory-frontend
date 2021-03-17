@@ -33,6 +33,9 @@
     "tailwindcss": "^2.0.3"
   },
   "jest": {
-    "moduleDirectories": ["node_modules", "."]
+    "moduleDirectories": [
+      "node_modules",
+      "."
+    ]
   }
 }

@@ -5,7 +5,7 @@ export default function Meta({ title, description }) {
     return (
         <Head>
             <title>{title}</title>
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/logo.svg" />
             <meta name="description" content={description} />
         </Head>
     );

@@ -1,15 +1,15 @@
 import React from 'react';
 import NavLink from "./NavLink";
+import Link from "next/link";
+import Button from "../Button/Button";
 
 const Navbar = () => {
     return (
-        <nav className="shadow-md fixed w-full z-10 flex justify-between p-5">
-            <div>Logo</div>
-            <ul className="flex">
-                <NavLink location='/'>Home</NavLink>
-                <NavLink location='/contact'>Contact</NavLink>
-                <NavLink location='/signup'>Signup</NavLink>
-                <NavLink location='/login'>Login</NavLink>
+        <nav id="main-nav" className="shadow-lg fixed w-full z-40 flex flex-wrap justify-between content-center px-10 bg-white">
+            <Link href="/">Logo</Link>
+            <ul>
+                <Button as="a" href="/" type="search" color="turquoise" outline="true" styles="mx-1">Sign in</Button>
+                <Button as="a" href="/" type="search" color="tangerine" outline="true" styles="mx-1">Add Listing +</Button>
             </ul>
         </nav>
     );
