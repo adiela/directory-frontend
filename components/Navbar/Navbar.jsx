@@ -1,5 +1,4 @@
 import React from 'react';
-import NavLink from "./NavLink";
 import Link from "next/link";
 import Button from "../Button/Button";
 

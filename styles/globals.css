@@ -51,3 +51,11 @@ a {
     position: absolute;
     text-align: center;
 }
+
+.star-icon {
+    fill: darkgrey;
+}
+
+.star-icon.star-rating, .star-rating ~ .star-icon {
+    fill: orange;
+}

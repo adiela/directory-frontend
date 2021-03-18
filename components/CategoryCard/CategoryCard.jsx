@@ -2,7 +2,7 @@ import React from 'react';
 
 const CategoryCard = () => {
     return (
-        <a href="/" className="p-7 shadow-md m-5 text-lg text-turquoise hover:text-tangerine">
+        <a href="/" className="p-7 rounded-md shadow-md m-5 text-lg text-turquoise hover:text-tangerine">
             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                  viewBox="0 0 512 512" className="m-auto stroke-current text-2xl"
             >

@@ -11,16 +11,16 @@ export default function Home() {
         <div id="search-container" className="flex flex-col p-5">
             <div className="m-auto">
                 <h2 className="text-4xl font-thin">Find what you need</h2>
-                <form className="mt-8 bg-white p-2 rounded-full text-gray-500">
+                <form noValidate={true} className="mt-8 bg-white p-2 rounded-full">
                     <input className="px-8 py-2 focus:outline-none rounded-l-full" type="text" name="description" placeholder="What are you looking for?" />
-                    <input className="px-5 py-2 focus:outline-none border-r-2 border-l-2" type="text" name="location" placeholder="Location" />
-                    <select className="px-8 py-2 focus:outline-none bg-white" name="category" id="category-select">
-                        <option value="" disabled={true} selected={true}>All Categories</option>
+                    <input required={true} className="px-5 py-2 focus:outline-none border-r-2 border-l-2" type="text" name="location" placeholder="Location" />
+                    <select required={true} className="px-8 py-2 focus:outline-none bg-white" name="category" id="category-select">
+                        <option disabled={true} selected={true} hidden={true}>All Categories</option>
                         <option value="cars">Cars</option>
                         <option value="photography">Photography</option>
                         <option value="dresses">Dresses</option>
                     </select>
-                    <Button type="search" size="lg" styles="ml-12" >Search</Button>
+                    <Button type="submit" size="lg" styles="ml-12" >Search</Button>
                 </form>
             </div>
         </div>
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="flex-container py-10">
             <SectionHeader>Popular Businesses</SectionHeader>
             <ul className="grid grid-cols-3">
-                <BusinessCard />
+                <BusinessCard rating={1} />
                 <BusinessCard />
                 <BusinessCard />
                 <BusinessCard />
