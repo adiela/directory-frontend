@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-const CategoryCard = () => {
+const CategoryCard = ({ category }) => {
     return (
         <a href="/" className="p-7 rounded-md shadow-md m-5 text-lg text-turquoise hover:text-tangerine">
             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
@@ -18,9 +19,13 @@ const CategoryCard = () => {
                 <path d="M200 368l-99.72 100.28a40 40 0 0 1-56.56 0h0a40 40 0 0 1 0-56.56L128 328" fill="none"
                       strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/>
             </svg>
-            <h5 className="text-center">Restaurants</h5>
+            <h5 className="text-center">{category.name}</h5>
         </a>
     );
+};
+
+CategoryCard.propTypes = {
+    category: PropTypes.object.isRequired
 };
 
 export default CategoryCard;

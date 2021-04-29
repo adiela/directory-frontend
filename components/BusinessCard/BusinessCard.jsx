@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 const StarIcon = (props) => {
     return (
@@ -10,32 +11,36 @@ const StarIcon = (props) => {
     );
 };
 
-const BusinessCard = ({rating}) => {
+const BusinessCard = ({ business }) => {
     return (
-        <a href="/" className="shadow-md rounded-md m-5">
+        <div className="shadow-md rounded-md m-5">
             <div
                 className="rounded-t-md text-white p-3 h-64 flex flex-col justify-end flex-wrap content-start bg-center bg-cover bg-no-repeat"
                 style={{backgroundImage: "linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 50%, rgba(0, 0, 0, 0.7)), url('https://www.vasterad.com/themes/listeo/images/listing-item-04.jpg')"}}
             >
-                <h5 className="text-xl">Business Name</h5>
+                <h5 className="text-xl">{business.name}</h5>
                 <Link href="/"><a className="bg-turquoise text-white rounded py-1 px-2 text-sm uppercase w-max">Category
                     Name</a></Link>
             </div>
             <div className="text-sm p-2 flex justify-between">
                 <div className="flex flex-row-reverse text-gray-300">
-                    <StarIcon className={`star-icon ${rating && rating === 5 && "star-rating"}`} />
-                    <StarIcon className={`star-icon ${rating && rating === 4 && "star-rating"}`} />
-                    <StarIcon className={`star-icon ${rating && rating === 3 && "star-rating"}`} />
-                    <StarIcon className={`star-icon ${rating && rating === 2 && "star-rating"}`} />
-                    <StarIcon className={`star-icon ${rating && rating === 1 && "star-rating"}`} />
+                    {/*<StarIcon className={`star-icon ${rating && rating === 5 && "star-rating"}`} />*/}
+                    {/*<StarIcon className={`star-icon ${rating && rating === 4 && "star-rating"}`} />*/}
+                    {/*<StarIcon className={`star-icon ${rating && rating === 3 && "star-rating"}`} />*/}
+                    {/*<StarIcon className={`star-icon ${rating && rating === 2 && "star-rating"}`} />*/}
+                    {/*<StarIcon className={`star-icon ${rating && rating === 1 && "star-rating"}`} />*/}
                 </div>
                 <div>
                     10 reviews
                 </div>
             </div>
 
-        </a>
+        </div>
     );
+};
+
+BusinessCard.propTypes = {
+    business: PropTypes.object.isRequired,
 };
 
 export default BusinessCard;
